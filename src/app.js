@@ -1,11 +1,18 @@
 var UI = require('ui');
+var Vector2 = require('vector2');
 //Create screen
 var start = new UI.Card({
   title: 'Magic 8 ball',
   subtitle: 'Think about your question',
   body: 'And shake your hand'
 });
-
+//Create answer element
+var element = new Text({ 
+  position: new Vector2(0, 0), size: new Vector2(144, 168) 
+});
+element.borderColor('white');
+element.Text.text('Sorry,try again');
+element.Text.textAlign('center');
 //Show card
 start.show();
 
@@ -25,6 +32,7 @@ start.on('accelTap', function(e) {
   var index = Math.floor(Math.random() * (answers.length));
   
   //Update screen
-  start.subtitle(answers[index]);
-  start.body('');
+  /*start.subtitle(answers[index]);
+  start.body('');*/
+  element.show();
 });

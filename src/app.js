@@ -21,10 +21,17 @@ Accel.config({
 //Shake handler
 start.on('accelTap', function(e) {
   //Intiate answers
-  var answers = ['Yes', 'No', 'Not sure, try again', 'Better try than not', 'Ask the stranger', 'You already know the answer', 'I would not do that', 'Do the first step'];
+  var answers = ['Yes',
+                 'No',
+                 'Not sure, try again',
+                 'Better try than not',
+                 'Ask the stranger',
+                 'You already know the answer',
+                 'I would not do that',
+                 'Do the first step'];
   var index = Math.floor(Math.random() * (answers.length));
   
   //Update screen
-  start.subtitle(answers[index]);
-  start.body('');
+  start.subtitle();
+  start.body(answers[index]);
 });

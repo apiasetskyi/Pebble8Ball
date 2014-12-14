@@ -32,6 +32,6 @@ start.on('accelTap', function(e) {
   var index = Math.floor(Math.random() * (answers.length));
   
   //Update screen
-  start.subtitle();
+  start.subtitle(' ');
   start.body(answers[index]);
 });

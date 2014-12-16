@@ -1,9 +1,9 @@
 var UI = require('ui');
 //Create screen
 var start = new UI.Card({
-  title: 'Magic 8 ball',
-  subtitle: 'Think about your question',
-  body: 'And shake your hand'
+  title: 'Think about your question',
+  body: 'and shake your hand',
+  banner: 'images/8ball-resized.png'
 });
 
 //Show card
@@ -32,6 +32,8 @@ start.on('accelTap', function(e) {
   var index = Math.floor(Math.random() * (answers.length));
   
   //Update screen
-  start.subtitle(' ');
-  start.body(answers[index]);
+  start.title(' ');
+  start.banner('');
+  start.body('');
+  start.subtitle(answers[index]);
 });

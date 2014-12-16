@@ -28,6 +28,11 @@
                 "file": "fonts/UbuntuMono-Regular.ttf",
                 "name": "MONO_FONT_14",
                 "type": "font"
+            },
+            {
+                "file": "images/8ball-resized.png",
+                "name": "IMAGES_8BALL_RESIZED_PNG",
+                "type": "png"
             }
         ]
     },

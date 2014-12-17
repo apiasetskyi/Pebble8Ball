@@ -20,28 +20,35 @@ Accel.config({
 });
 
 //Shake handler
+start.on('accelVibe', function(e) {
+  return;
+});
 start.on('accelTap', function(e) {
-  //Intiate answers
-  var answers = ['Yes',
-                 'No',
-                 'Not sure, try shaking your hand again',
-                 'Better try than not. What you lose?',
-                 'Ask the stranger. Yes the firstone.',
-                 'You already know the answer',
-                 'I would not do that, but if you want...',
-                 'Do the first step, please'];
-  var index = Math.floor(Math.random() * (answers.length));
-  
-  //Update screen
-  start.subtitle(' ');
-  start.banner('');
-  start.body('');
-  if (answers[index].length <= 14) {
-    start.subtitle('\n' + answers[index]);
+  if (Accel.vibe) {
+    return;
   }
   else {
-    start.subtitle(answers[index]);
-    start.title(' ');
-  }
+    //Intiate answers
+    var answers = ['Yes',
+                   'No',
+                   'Not sure, try shaking your hand again',
+                   'Better try than not. What you lose?',
+                   'Ask the stranger. Yes the firstone.',
+                   'You already know the answer',
+                   'I would not do that, but if you want...',
+                   'Do the first step, please'];
+    var index = Math.floor(Math.random() * (answers.length));
   
+    //Update screen
+    start.subtitle(' ');
+    start.banner('');
+    start.body('');
+    if (answers[index].length <= 14) {
+      start.subtitle('\n' + answers[index]);
+    }
+    else {
+      start.subtitle(answers[index]);
+      start.title(' ');
+    }
+  }
 });

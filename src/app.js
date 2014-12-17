@@ -24,19 +24,19 @@ start.on('accelTap', function(e) {
   //Intiate answers
   var answers = ['Yes',
                  'No',
-                 'Not sure, try again',
-                 'Better try than not',
-                 'Ask the stranger',
+                 'Not sure, try shaking your hand again',
+                 'Better try than not. What you lose?',
+                 'Ask the stranger. Yes the firstone.',
                  'You already know the answer',
-                 'I would not do that',
-                 'Do the first step'];
+                 'I would not do that, but if you want...',
+                 'Do the first step, please'];
   var index = Math.floor(Math.random() * (answers.length));
   
   //Update screen
   start.subtitle(' ');
   start.banner('');
   start.body('');
-  if (answers[index].length <= 15) {
+  if (answers[index].length <= 14) {
     start.subtitle('\n' + answers[index]);
   }
   else {

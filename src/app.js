@@ -3,6 +3,7 @@ var UI = require('ui');
 var start = new UI.Card({
   title: 'Think about your question',
   body: 'and shake your hand',
+  style: 'large',
   banner: 'images/8ball-resized.png'
 });
 

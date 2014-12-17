@@ -1,7 +1,7 @@
 var UI = require('ui');
 //Create screen
 var start = new UI.Card({
-  title: 'Think about your question',
+  subtitle: 'Think about your question',
   body: 'and shake your hand',
   style: 'large',
   banner: 'images/8ball-resized.png'
@@ -33,8 +33,15 @@ start.on('accelTap', function(e) {
   var index = Math.floor(Math.random() * (answers.length));
   
   //Update screen
-  start.title(' ');
+  start.subtitle(' ');
   start.banner('');
   start.body('');
-  start.subtitle(answers[index]);
+  if (answers[index].length <= 15) {
+    start.subtitle('\n' + answers[index]);
+  }
+  else {
+    start.subtitle(answers[index]);
+    start.title(' ');
+  }
+  
 });

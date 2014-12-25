@@ -36,7 +36,7 @@ start.on('accelTap', function(e) {
                    'Ask the stranger. Yes the firstone.',
                    'You already know the answer',
                    'I would not do that, but if you want...',
-                   'Do the first step, please'];
+                   'Do the first step, please. Just do it!'];
     var index = Math.floor(Math.random() * (answers.length));
   
     //Update screen
@@ -44,6 +44,7 @@ start.on('accelTap', function(e) {
     start.banner('');
     start.body('');
     if (answers[index].length <= 14) {
+      start.title(' ');
       start.subtitle('\n' + answers[index]);
     }
     else {

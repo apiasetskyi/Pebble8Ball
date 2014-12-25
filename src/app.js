@@ -1,3 +1,12 @@
+/* 
+
+This is small, but still useful
+pebble decision maker for noncritical quetions
+
+Version 1.1
+
+*/
+
 var UI = require('ui');
 //Create screen
 var start = new UI.Card({
